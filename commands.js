@@ -32,7 +32,7 @@ async function onMessageComposeHandler(event) {
     debugMessage("Get Token")
     try {
         const token = OfficeRuntime.auth.getAccessToken();
-        debugMessage(`Token ${token} `)
+        debugMessage(`Token ${token.token} `)
     } catch (error) {
         debugMessage(`Failed Token ${error} `)
     }
