@@ -37,17 +37,17 @@ async function onMessageComposeHandler(event) {
     //     debugMessage('Get Access Token Error');
     //     debugMessage(error.message ? error.message : error);
     // }
-    try {
-        const token = await OfficeRuntime.auth.getAccessToken();
-        debugMessage(`Token ${token}`)
-    } catch (error) {
-        debugMessage(`Failed Token ${error} `)
-    }
+    // try {
+    //     const token = await OfficeRuntime.auth.getAccessToken();
+    //     debugMessage(`Token ${token}`)
+    // } catch (error) {
+    //     debugMessage(`Failed Token ${error} `)
+    // }
     try {
         try {
             debugMessage("Native fetch Start");
             await fetch(url, {
-                mode: "cors",
+                //mode: "cors",
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -107,7 +107,7 @@ async function onMessageComposeHandler(event) {
         try {
             debugMessage("Text/Plain Start");
             await fetch(url, {
-                mode: "cors",
+                //mode: "cors",
                 method: "POST",
                 headers: {
                     "Content-Type": "text/plain",
