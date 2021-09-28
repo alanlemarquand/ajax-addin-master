@@ -30,12 +30,15 @@ function debugMessage(text) {
 async function onMessageComposeHandler(event) {
     debugMessage("Start");
     debugMessage("Get Token")
-    try {
-        const token = OfficeRuntime.auth.getAccessToken();
-        debugMessage(`Token ${token.token} `)
-    } catch (error) {
-        debugMessage(`Failed Token ${error} `)
-    }
+
+		try {
+			debugMessage('Get Access Token');
+			const token = await OfficeRuntime.auth.getAccessToken({ allowConsentPrompt: false, allowSignInPrompt: false });
+			debugMessage('Get Access Token Success');
+		} catch (error: any) {
+			debugMessage('Get Access Token Error');
+			debugMessage(error.message ? error.message : error);
+		}
     try {
         try {
             debugMessage("Native fetch Start");
