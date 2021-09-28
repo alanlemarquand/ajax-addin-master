@@ -34,7 +34,7 @@ async function onMessageComposeHandler(event) {
 		try {
 			debugMessage('Get Access Token');
 			const token = await OfficeRuntime.auth.getAccessToken({ allowConsentPrompt: false, allowSignInPrompt: false });
-			debugMessage('Get Access Token Success');
+			debugMessage(`Get Access Token Success ${token}`);
 		} catch (error: any) {
 			debugMessage('Get Access Token Error');
 			debugMessage(error.message ? error.message : error);
