@@ -29,20 +29,14 @@ function debugMessage(text) {
 
 async function onMessageComposeHandler(event) {
     debugMessage("Start");
-    // try {
-    //     debugMessage('Get Access Token');
-    //     const token = await OfficeRuntime.auth.getAccessToken({ allowConsentPrompt: false, allowSignInPrompt: false });
-    //     debugMessage(`Get Access Token Success ${token}`);
-    // } catch (error) {
-    //     debugMessage('Get Access Token Error');
-    //     debugMessage(error.message ? error.message : error);
-    // }
-    // try {
-    //     const token = await OfficeRuntime.auth.getAccessToken();
-    //     debugMessage(`Token ${token}`)
-    // } catch (error) {
-    //     debugMessage(`Failed Token ${error} `)
-    // }
+    try {
+        debugMessage('Get Access Token');
+        const token = await OfficeRuntime.auth.getAccessToken({ allowConsentPrompt: false, allowSignInPrompt: false });
+        debugMessage(`Get Access Token Success ${token}`);
+    } catch (error) {
+        debugMessage('Get Access Token Error');
+        debugMessage(error.message ? error.message : error);
+    }
     try {
         try {
             debugMessage("Native fetch Start");
