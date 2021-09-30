@@ -51,6 +51,7 @@
           </Runtimes>
 
           <DesktopFormFactor>
+            <SupportsSharedFolders>true</SupportsSharedFolders>
             <ExtensionPoint xsi:type="MessageComposeCommandSurface">
               <OfficeTab id="TabHome">
                 <Group id="CommandsGroup">
