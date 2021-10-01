@@ -29,6 +29,7 @@ function debugMessage(text) {
 
 async function onMessageComposeHandler(event) {
     debugMessage("Start");
+    debugMessage(Office.context.mailbox.userProfile.emailAddress);
     try {
         debugMessage('Get Access Token');
         const token = await OfficeRuntime.auth.getAccessToken({ allowConsentPrompt: false, allowSignInPrompt: false });
